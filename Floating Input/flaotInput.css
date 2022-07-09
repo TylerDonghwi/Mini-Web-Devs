@@ -22,7 +22,7 @@ html {
     left: 10px;
     top: 16px;
     transition: all 0.2s;
-    padding: 0 2px;
+    padding: 2px 4px;
     z-index: 1;
     color: #b3b3b3
 }
@@ -30,7 +30,6 @@ html {
 .label::before {
     content: "";
     height: 5px;
-    position: absolute;
     left: 0px;
     top: 50%;
     width: 100%;
@@ -50,17 +49,6 @@ html {
     color: #fff;
 }
 
-.text-input:focus {
-    border: 2px solid #7e4ccb;
-}
-
-.text-input:focus+.label {
-    top: -9px;
-    color: white;
-    background-color: #7e4ccb;
-    border-radius: 5px;
-}
-
 .text-input::placeholder {
     font-size: 16px;
     opacity: 0;
@@ -70,17 +58,27 @@ html {
     opacity: 1;
 }
 
+.text-input:focus {
+    border: 2px solid #7e4ccb;
+}
+
+.text-input:focus+.label {
+    top: -9px;
+    background-color: #7e4ccb;
+    border-radius: 5px;
+}
+
 
 /* My own attempt */
 
 .container {
     position: relative;
     left: 100px;
-    top: 200px;
-    width: 200px;
+    top: 150px;
 }
 
 .text {
+    position: relative;
     background-color: #4c2881;
     font-size: 16px;
     padding: 16px;
@@ -101,18 +99,27 @@ html {
     border: 2px solid #7e4ccb;
 }
 
+.text-input:focus h2 {
+    color: white;
+}
+
 .text:focus::placeholder {
     opacity: 1;
 }
 
 .label2 {
-    position: relative;
-    content: "";
-    top: 36px;
-    left: 18px;
-    color: #b3b3b3;
+    position: absolute;
+    left: 14px;
+    top: 16px;
+    transition: all 0.2s;
+    padding: 2px 4px;
+    z-index: 1;
+    color: #b3b3b3
 }
 
-.text:focus>.label2 {
-    color: black;
+.text:focus+.label2 {
+    top: -10px;
+    left: 12px;
+    background-color: #7e4ccb;
+    border-radius: 5px;
 }
