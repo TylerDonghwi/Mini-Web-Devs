@@ -1,6 +1,14 @@
 html {
     font-family: sans-serif;
+    background-color: gray;
 }
+
+* {
+    box-sizing: border-box;
+}
+
+
+/* follow along */
 
 .input-container {
     width: 280px;
@@ -60,4 +68,51 @@ html {
 
 .text-input:focus::placeholder {
     opacity: 1;
+}
+
+
+/* My own attempt */
+
+.container {
+    position: relative;
+    left: 100px;
+    top: 200px;
+    width: 200px;
+}
+
+.text {
+    background-color: #4c2881;
+    font-size: 16px;
+    padding: 16px;
+    outline: none;
+    color: #b3b3b3;
+    width: 280px;
+    border: 2px solid #2f2c45;
+    border-radius: 5px;
+    transition: all 0.3s;
+}
+
+.text::placeholder {
+    opacity: 0;
+}
+
+.text:focus {
+    border: 2px solid #7e4ccb;
+}
+
+.text:focus::placeholder {
+    opacity: 1;
+}
+
+.label2 {
+    position: absolute;
+    content: "";
+    top: 18px;
+    left: 18px;
+    color: #b3b3b3
+}
+
+.text:active>.label2 {
+    background-color: #4c2881;
+    color: white;
 }
