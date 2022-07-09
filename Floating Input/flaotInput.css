@@ -85,7 +85,7 @@ html {
     font-size: 16px;
     padding: 16px;
     outline: none;
-    color: #b3b3b3;
+    color: white;
     width: 280px;
     border: 2px solid #2f2c45;
     border-radius: 5px;
@@ -94,6 +94,7 @@ html {
 
 .text::placeholder {
     opacity: 0;
+    color: #b3b3b3;
 }
 
 .text:focus {
@@ -105,14 +106,13 @@ html {
 }
 
 .label2 {
-    position: absolute;
+    position: relative;
     content: "";
-    top: 18px;
+    top: 36px;
     left: 18px;
-    color: #b3b3b3
+    color: #b3b3b3;
 }
 
-.text:active>.label2 {
-    background-color: #4c2881;
-    color: white;
+.text:focus>.label2 {
+    color: black;
 }
