@@ -1,5 +1,6 @@
 html {
     background-color: gray;
+    font-family: sans-serif;
 }
 
 .input-container {
@@ -12,34 +13,34 @@ html {
 .label {
     position: absolute;
     left: 10px;
-    top: 14px;
+    top: 16px;
     transition: all 0.2s;
     padding: 0 2px;
     z-index: 1;
     color: #b3b3b3
 }
 
+.label::before {
+    content: "";
+    height: 5px;
+    position: absolute;
+    left: 0px;
+    top: 50%;
+    width: 100%;
+    z-index: -1;
+}
+
 .text-input {
     padding: 0.8rem;
     width: 100%;
     height: 100%;
+    background-color: #4c2881;
     border: 2px solid #2f2c45;
     border-radius: 5px;
     font-size: 18px;
     outline: none;
     transition: all 0.3s;
     color: #fff;
-}
-
-.label::before {
-    content: "";
-    height: 5px;
-    background: #272530;
-    position: absolute;
-    left: 0px;
-    top: 10px;
-    width: 100%;
-    z-index: -1;
 }
 
 .text-input:focus {
@@ -53,7 +54,7 @@ html {
 }
 
 .text-input::placeholder {
-    font-size: : 16px;
+    font-size: 16px;
     opacity: 0;
     transitions: all 0.3s;
 }
