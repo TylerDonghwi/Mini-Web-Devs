@@ -1,5 +1,4 @@
 html {
-    background-color: gray;
     font-family: sans-serif;
 }
 
@@ -47,16 +46,16 @@ html {
     border: 2px solid #7e4ccb;
 }
 
-.text-input:focus+.label,
-.filled {
-    top: -10px;
-    color: #7e4ccb;
+.text-input:focus+.label {
+    top: -9px;
+    color: white;
+    background-color: #7e4ccb;
+    border-radius: 5px;
 }
 
 .text-input::placeholder {
     font-size: 16px;
     opacity: 0;
-    transitions: all 0.3s;
 }
 
 .text-input:focus::placeholder {
