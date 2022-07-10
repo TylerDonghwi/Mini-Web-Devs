@@ -2,6 +2,7 @@
     padding: none;
     margin: none;
     box-sizing: border-box;
+    transition: all 0.2s;
 }
 
 body {
@@ -15,9 +16,24 @@ body {
 
 .otp-field {
     display: flex;
+    flex-direction: row;
 }
 
 .otp-field input {
-    width: 20px;
+    width: 37px;
     outline: none;
+    border-radius: 5px;
+    margin: 4px;
+    text-align: center;
+    padding: 10px;
+    border: 2px solid rgb(128, 100, 128);
+}
+
+.otp-field input:focus {
+    border: 2px solid purple;
+    box-shadow: 0 0 .5px .5px purple
+}
+
+.space {
+    margin-right: 1rem !important;
 }
