@@ -5,7 +5,7 @@ inputs.forEach((input, index) => {
     input.addEventListener('keyup', handleOtp)
 })
 
-const handleOnPasteOtp = (e) => {
+function handleOnPasteOtp(e) {
     const data = e.clipboardData.getData('text')
     const value = data.spit('')
     if (value.length == inputs.length) {
@@ -14,7 +14,7 @@ const handleOnPasteOtp = (e) => {
     }
 }
 
-const handleOtp = (e) => {
+function handleOtp(e) {
     const input = e.target
     let value = input.value
     input.value = ''
@@ -33,7 +33,7 @@ const handleOtp = (e) => {
     }
 }
 
-const submit = () => {
+function submit() {
     let otp = ''
     inputs.forEach(input => {
         otp += input.value
