@@ -1,0 +1,23 @@
+* {
+    padding: none;
+    margin: none;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: grey;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.otp-field {
+    display: flex;
+}
+
+.otp-field input {
+    width: 20px;
+    outline: none;
+}
