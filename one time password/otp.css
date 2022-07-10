@@ -37,3 +37,7 @@ body {
 .space {
     margin-right: 1rem !important;
 }
+
+.disabled {
+    opacity: 0.5
+}
