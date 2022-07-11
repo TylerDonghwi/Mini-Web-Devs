@@ -1,4 +1,12 @@
 const inputs = document.querySelectorAll('.otp-field input')
+const submitBtn = document.querySelector('#submitBtn')
+
+submitBtn.addEventListener('click', () => {
+    inputs.forEach(input => {
+        input.disabled = false
+        input.classList.remove("disabled")
+    })
+})
 
 inputs.forEach((input, index) => {
     input.dataset.index = index
@@ -19,7 +27,11 @@ function handleOtp(e) {
     if ((e.key == 'Backspace' || e.key == 'ArrowLeft') && input.dataset.index > 0) {
         input.previousElementSibling.focus()
     }
-    if (input.dataset.index == inputs.length - 1) {
+
+    // in order to submit it needs to check that all inputs are filled 
+
+    // alert otherwise
+    if (input.dataset.index == inputs.length - 1 && value.length > 0) {
         submit()
     }
 }

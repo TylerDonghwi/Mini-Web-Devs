@@ -21,6 +21,7 @@ body {
 
 .otp-field input {
     width: 37px;
+    height: 37px;
     outline: none;
     border-radius: 5px;
     margin: 4px;
@@ -40,4 +41,10 @@ body {
 
 .disabled {
     opacity: 0.5
+}
+
+#submitBtn {
+    width: 37px;
+    height: 37px;
+    margin: 4px;
 }
