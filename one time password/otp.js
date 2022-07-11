@@ -10,6 +10,7 @@ submitBtn.addEventListener('click', () => {
             input.classList.remove("disabled")
             input.value = ''
         })
+        disabled = false
     } else {
         checkSuitable()
     }
