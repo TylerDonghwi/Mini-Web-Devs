@@ -47,4 +47,17 @@ body {
     width: 37px;
     height: 37px;
     margin: 4px;
+    background-color: white;
+    position: relative;
+    border: 2px solid rgb(128, 100, 128);
+    border-radius: 5px;
+}
+
+#submitBtn:hover {
+    background-color: rgb(210, 210, 210);
+}
+
+#submitBtn:active {
+    top: 1px;
+    left: 1px;
 }

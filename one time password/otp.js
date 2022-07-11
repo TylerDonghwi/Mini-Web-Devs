@@ -1,16 +1,24 @@
 const inputs = document.querySelectorAll('.otp-field input')
 const submitBtn = document.querySelector('#submitBtn')
+let disabled = false
 
+// if the button is clicked it submits only if the inputs are filled with all 6 characters
 submitBtn.addEventListener('click', () => {
-    inputs.forEach(input => {
-        input.disabled = false
-        input.classList.remove("disabled")
-    })
+    if (disabled) {
+        inputs.forEach(input => {
+            input.disabled = false
+            input.classList.remove("disabled")
+            input.value = ''
+        })
+    } else {
+        checkSuitable()
+    }
+
 })
 
 inputs.forEach((input, index) => {
     input.dataset.index = index
-        // input.addEventListener('past', handleOnPasteOtp)
+    input.addEventListener('paste', handleOnPasteOtp)
     input.addEventListener('keyup', handleOtp)
 })
 
@@ -28,23 +36,36 @@ function handleOtp(e) {
         input.previousElementSibling.focus()
     }
 
-    // in order to submit it needs to check that all inputs are filled 
-
-    // alert otherwise
-    if (input.dataset.index == inputs.length - 1 && value.length > 0) {
-        submit()
+    if (e.key == 'Enter') {
+        checkSuitable()
     }
 }
 
+function checkSuitable() {
+    let suitable = true
+    inputs.forEach(input => {
+        if (input.value.length == 0) {
+            suitable = false
+        }
+    })
 
-// function handleOnPasteOtp(e) {
-//     const data = e.clipboardData.getData('text')
-//     const value = data.spit('')
-//     if (value.length == inputs.length) {
-//         inputs.forEach((input, index) => (input.value = value[index]))
-//         submit()
-//     }
-// }
+    if (suitable) {
+        submit()
+    } else {
+        alert('All boxes need to be filled')
+    }
+}
+
+function handleOnPasteOtp(e) {
+    const data = e.clipboardData.getData('text')
+    const value = data.split('')
+    if (value.length === inputs.length) {
+        inputs.forEach((input, index) => {
+            input.value = value[index]
+        })
+        checkSuitable()
+    }
+}
 
 function submit() {
     let otp = ''
@@ -54,4 +75,6 @@ function submit() {
         input.classList.add("disabled")
     })
     console.log(otp)
+    otp = ''
+    disabled = true
 }
