@@ -21,13 +21,25 @@ body {
 }
 
 .circle {
-    /* position: absolute; */
+    position: relative;
+    left: 137.5px;
     width: 35px;
     height: 35px;
     margin: 10px;
     border-radius: 50%;
     background-color: white;
     animation: ripple 2s ease-in-out infinite;
+}
+
+.circ {
+    position: relative;
+    right: 137.5px;
+    width: 35px;
+    height: 35px;
+    margin: 10px;
+    border-radius: 50%;
+    background-color: white;
+    transform: scale(0.8);
 }
 
 .c1 {
