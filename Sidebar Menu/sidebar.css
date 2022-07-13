@@ -28,13 +28,17 @@ body {
 }
 
 .item {
+    position: relative;
     padding: 10px;
     margin: 25px;
-    box-shadow: 0 0 1px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    cursor: pointer;
 }
 
-.item:hover {
-    /* shift to right and bottom, darker background */
+.item:hover,
+.item:hover ion-icon {
+    background-color: rgb(240, 240, 240);
 }
 
 .text {
@@ -49,4 +53,13 @@ a {
 ion-icon {
     color: black;
     background-color: white;
+}
+
+.active {
+    left: 30px;
+    background-color: rgb(245, 245, 245);
+}
+
+.active ion-icon {
+    background-color: rgb(245, 245, 245);
 }
