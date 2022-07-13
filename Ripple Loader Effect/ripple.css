@@ -14,32 +14,29 @@ body {
 }
 
 .container {
+    position: relative;
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
 }
 
+.co1 {
+    left: -100px;
+}
+
+.co3 {
+    left: 100px;
+}
+
 .circle {
-    position: relative;
-    left: 137.5px;
+    position: absolute;
     width: 35px;
     height: 35px;
     margin: 10px;
     border-radius: 50%;
     background-color: white;
     animation: ripple 2s ease-in-out infinite;
-}
-
-.circ {
-    position: relative;
-    right: 137.5px;
-    width: 35px;
-    height: 35px;
-    margin: 10px;
-    border-radius: 50%;
-    background-color: white;
-    transform: scale(0.8);
 }
 
 .c1 {
