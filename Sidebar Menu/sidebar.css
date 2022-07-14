@@ -22,7 +22,7 @@ body {
 
 .menu {
     padding: 10px;
-    margin: 25px 15px 25px 15px;
+    margin: 25px 25px 25px 15px;
     cursor: pointer;
     border-radius: 10px;
     display: flex;
@@ -31,6 +31,7 @@ body {
 }
 
 .item {
+    background-color: white;
     position: relative;
     padding: 10px;
     margin: 25px 15px 25px 15px;
@@ -41,6 +42,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    z-index: 1;
 }
 
 .item:hover,
@@ -51,12 +53,21 @@ body {
 }
 
 .text {
-    display: none;
+    position: relative;
+    visibility: hidden;
+    background-color: white;
+    padding: 10px;
+    border-radius: 10px;
+    z-index: 0;
 }
 
 a {
     text-decoration: none;
     color: black;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
 }
 
 ion-icon {
