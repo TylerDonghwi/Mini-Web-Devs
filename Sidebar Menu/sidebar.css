@@ -56,12 +56,13 @@ body {
     position: relative;
     visibility: hidden;
     background-color: white;
-    padding: 10px;
+    padding: 15px;
     border-radius: 10px;
     z-index: 0;
 }
 
 a {
+    position: relative;
     text-decoration: none;
     color: black;
     display: flex;
@@ -81,4 +82,19 @@ ion-icon {
 
 .active ion-icon {
     background-color: rgb(245, 245, 245);
+}
+
+.link {
+    border-radius: 10px;
+    position: relative;
+}
+
+.link:hover,
+.link:hover * {
+    background-color: rgb(245, 245, 245);
+}
+
+.link:active {
+    top: 1px;
+    left: 1px;
 }
