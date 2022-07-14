@@ -34,6 +34,7 @@ body {
     box-shadow: 0 0 2px rgba(0, 0, 0, 0.2);
     border-radius: 10px;
     cursor: pointer;
+    transition: all 0.3s;
 }
 
 .item:hover,
@@ -53,10 +54,10 @@ a {
 ion-icon {
     color: black;
     background-color: white;
+    transition: all 0.3s;
 }
 
 .active {
-    left: 30px;
     background-color: rgb(245, 245, 245);
 }
 
